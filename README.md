@@ -13,31 +13,31 @@
    * EAGP: emotion, age, gener, pose
    * runing script:
 python ALTERNATIVE_EP.py {other similar function, ALTERNATIVE_EA.py, ALTERNATIVE_EGA.py}
-$ dataset 
+ * dataset 
 --dataset_emotion=expw 
 --dataset_pose=aflw
-$ model 
+ * model 
 --epoch=64 
 --model=vggFace  
 --batch_size=32 
-$ traiing tricks
+ * traiing tricks
 --is_augmentation=False 
 --is_dropout=False 
 --is_bn=False 
 --weights_decay=0 
 --is_freezing=False 
 --no_freezing_epoch=0 
-$ multi-task weights
+ * multi-task weights
 --P_loss_weights=1 
 --E_loss_weights=1
-$ preserve information method(distilling knowledge) && augment information method(pseudo labels)
+ * preserve information method(distilling knowledge) && augment information method(pseudo labels)
 --is_naive=False 
 --is_distilled=False 
 --is_pesudo=True 
 --is_interpolation=False 
 --interpolation_weights=0 
 --selection_threshold=0.8
-$ selection method 
+ * selection method 
 --is_pesudo_confidence=True 
 --is_pesudo_density=True 
 --is_pesudo_distribution=True 
@@ -47,21 +47,21 @@ $ selection method
    * EAGP: emotion, age, gener, pose
    * runing script:
 python CONFUSION_EPGA_multitask.py {other similar function,CONFUSION_EA_multitask.py}
-$ dataset 
+ * dataset 
 --dataset_emotion=expw 
 --dataset_pose=aflw
-$ model 
+ * model 
 --epoch=64 
 --model=vggFace 
 --batch_size=32 
-$ traiing tricks
+ * traiing tricks
 --is_augmentation=False 
 --is_dropout=False 
 --is_bn=False 
 --weights_decay=0 
 --is_freezing=False 
 --no_freezing_epoch=0 
-$ multi-task weights
+ * multi-task weights
 --P_loss_weights=1 
 --E_loss_weights=1
 
@@ -72,14 +72,14 @@ python STL_general_train.py
 --model=vggFace 
 --epoch=64 
 --batch_size=32 
-$ triaing tricks
+ * triaing tricks
 --is_augmentation=False 
 --is_dropout=False 
 --is_bn=False 
 --weights_decay=0 
 --is_freezing=False 
 --no_freezing_epoch=0 
-$ task type
+ * task type
 --task_type=0(refer to the definition of model)
 
 
